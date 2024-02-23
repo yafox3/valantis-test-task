@@ -1,0 +1,17 @@
+.skeleton {
+	background: #dfdfdf;
+	border-radius: 10px;
+	animation: pulse infinite 1.5s ease;
+}
+
+@keyframes pulse {
+	0% {
+		opacity: .5;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: .5;
+	}
+}
