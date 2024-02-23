@@ -19,3 +19,18 @@
 _(Для каждого товара генерируется случайная фотография, сделано для удобства просмотра.)_
 
 ---
+
+### Запуск
+
+```bash
+git clone git@github.com:yafox3/valantis-test-task.git
+cd ./valantis-test-task
+npm run dev
+```
+
+Для работы API, нужно добавить .env.local в корне проекта
+
+```env
+VITE_API_URL=http://api.example.com/
+VITE_API_PASSWORD=password
+```
