@@ -22,10 +22,11 @@ const selectOptions = [
 	}
 ]
 
+const limit = 50
+
 const App = () => {
 	const [products, setProducts] = useState<IProduct[]>([])
 	const [searchQuery, setSearchQuery] = useState<IGetIdsByQueryRequestParams>({})
-	const [limit, setLimit] = useState(50)
 	const [page, setPage] = useState(1)
 	const [selectedQuery, setSelectedQuery] = useState<QueryBy>('price')
 	const [isPostsLoading, , fetchProducts] = useFetch(async () => {
@@ -73,7 +74,7 @@ const App = () => {
 		const start = (page - 1) * limit
 		const end = Math.min(start + limit, uniqueProducts.length)
 		return uniqueProducts.slice(start, end)
-	}, [uniqueProducts, page, limit])
+	}, [uniqueProducts, page])
 
 	return (
 		<div className={styles.wrapper}>
